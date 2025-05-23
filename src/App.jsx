@@ -1,10 +1,12 @@
 import React from "react";
 import Header from "./components/Header";
+import Landing from "./components/Landing";
 
 function App() {
   return (
     <>
       <Header />
+      <Landing />
       <main className="pt-20 min-h-screen bg-gray-100">
         <section className="h-[100vh] flex items-center justify-center text-4xl">
           Landing Section Placeholder
