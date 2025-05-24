@@ -1,23 +1,25 @@
 import React from "react";
-import profilePic from "../assets/profile.png"; // make sure this path matches your actual image location
+import landingImage from "../assets/profile_1.png";
 
 const Landing = () => {
   return (
     <section
       id="landing-section"
-      className="w-full min-h-screen flex flex-col md:flex-row items-center justify-center px-6 bg-[#f4f1eb]"
+      className="min-h-screen bg-[#f4f1eb] flex items-center justify-center px-6 md:px-12"
     >
-      <div className="shadow-lg">
-        <img
-          src={profilePic}
-          alt="Ellis Pae"
-          className="max-w-xs md:max-w-sm border"
-        />
-      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 items-center max-w-[1200px] w-full gap-y-12 md:gap-x-32">
+        <div className="flex justify-center">
+          <img
+            src={landingImage}
+            alt="Ellis Pae"
+            className="w-[340px] border border-black shadow-md"
+          />
+        </div>
 
-      <div className="mt-8 md:mt-0 md:ml-52 text-center md:text-left">
-        <h1 className="text-5xl font-bold text-gray-900">Ellis Pae</h1>
-        <p className="mt-4 text-xl text-gray-700">Software Engineer</p>
+        <div className="text-center md:text-left">
+          <h1 className="text-5xl font-bold text-gray-900 mb-4">Ellis Pae</h1>
+          <p className="text-xl text-gray-700">Software Engineer</p>
+        </div>
       </div>
     </section>
   );
