@@ -99,7 +99,7 @@ const ContactMe = () => {
                 pattern: { value: /^\S+@\S+$/, message: "Enter a valid email" },
               })}
               className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm"
-              placeholder="you@example.com"
+              placeholder="john.doe@example.com"
             />
             {errors.email && (
               <p className="text-red-500 text-sm mt-1">

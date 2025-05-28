@@ -4,6 +4,7 @@ import {
   faGithub,
   faLinkedin,
   faInstagram,
+  faStackOverflow,
 } from "@fortawesome/free-brands-svg-icons";
 import {
   faEnvelope as faSolidEnvelope,
@@ -15,22 +16,27 @@ const socialLinks = [
   {
     name: "Email",
     icon: faSolidEnvelope,
-    url: "mailto:you@example.com",
+    url: "mailto:ellis.h.pae@example.com",
   },
   {
     name: "LinkedIn",
     icon: faLinkedin,
-    url: "https://linkedin.com",
+    url: "https://www.linkedin.com/in/ellispae/",
   },
   {
     name: "GitHub",
     icon: faGithub,
-    url: "https://github.com",
+    url: "https://github.com/ellisPae",
   },
   {
     name: "Instagram",
     icon: faInstagram,
     url: "https://instagram.com",
+  },
+  {
+    name: "Stack Overflow",
+    icon: faStackOverflow,
+    url: "https://stackoverflow.com", // replace with your actual profile link
   },
 ];
 
@@ -67,7 +73,7 @@ const Header = () => {
               className="hover:text-blue-400"
               aria-label={name}
             >
-              <FontAwesomeIcon icon={icon} />
+              <FontAwesomeIcon icon={icon} className="text-xl" />
             </a>
           ))}
         </div>
@@ -76,7 +82,7 @@ const Header = () => {
           <button onClick={toggleMenu} aria-label="Toggle Menu">
             <FontAwesomeIcon
               icon={isMenuOpen ? faTimes : faBars}
-              className="text-xl"
+              className="text-2xl"
             />
           </button>
         </div>
