@@ -41,7 +41,7 @@ const ProjectsCarousel = () => {
   return (
     <section
       id="projects-section"
-      className="bg-[#f4f1eb] px-6 py-20 min-h-screen text-gray-800"
+      className="bg-white min-h-screen text-gray-800 flex items-center justify-center px-6 pt-32 pb-20 dark:bg-gray-900 text-gray-800 dark:text-gray-200"
     >
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl font-bold mb-10 text-left">Projects</h2>
@@ -58,7 +58,7 @@ const ProjectsCarousel = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="flex flex-col md:flex-row items-center gap-10 bg-white p-8 rounded-lg shadow-md"
+              className="flex flex-col md:flex-row items-center gap-10 bg-gray-50 p-8 rounded-xl shadow-sm border border-gray-200"
             >
               <div className="w-[200px] h-[200px] flex-shrink-0 overflow-hidden rounded-md shadow">
                 <img

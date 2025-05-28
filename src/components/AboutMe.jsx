@@ -5,7 +5,7 @@ const AboutMe = () => {
   return (
     <section
       id="aboutme-section"
-      className="min-h-screen flex items-center justify-center bg-[#f4f1eb] px-4 py-16"
+      className="min-h-screen flex items-center justify-center bg-white px-4 py-16 dark:bg-gray-900 text-gray-800 dark:text-gray-200"
     >
       <div className="max-w-screen-xl w-full flex flex-col md:flex-row justify-between items-center md:items-start gap-y-8 md:gap-x-20">
         <div className="max-w-xl text-left">
@@ -37,7 +37,7 @@ const AboutMe = () => {
           <img
             src={aboutImage}
             alt="Kaito the dog"
-            className="w-[340px] rounded shadow-lg border border-black"
+            className="w-[340px] rounded-xl border border-gray-300 shadow-md transition-transform hover:scale-105"
           />
         </div>
       </div>

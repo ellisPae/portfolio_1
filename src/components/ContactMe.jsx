@@ -65,11 +65,11 @@ const ContactMe = () => {
     <div>
       <section
         id="contactme-section"
-        className="bg-[#f4f1eb] min-h-screen px-6 py-16 flex justify-center items-center"
+        className="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 min-h-screen px-6 py-16 flex justify-center items-center"
       >
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="bg-white p-8 rounded-lg shadow-md w-full max-w-xl space-y-6"
+          className="bg-white p-10 rounded-xl shadow-lg w-full max-w-xl space-y-6 border border-gray-200 dark:bg-gray-900 text-gray-800 dark:text-gray-200"
         >
           <h2 className="text-3xl font-bold text-center text-gray-800">
             Contact Me
@@ -181,7 +181,7 @@ const ContactMe = () => {
 
           <button
             type="submit"
-            className="w-full bg-gray-800 text-white py-2 px-4 rounded-md hover:bg-gray-700 transition disabled:opacity-50"
+            className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition disabled:opacity-50"
             disabled={isSending}
           >
             {isSending ? "Sending..." : "Send Message"}

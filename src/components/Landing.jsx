@@ -5,14 +5,14 @@ const Landing = () => {
   return (
     <section
       id="landing-section"
-      className="min-h-screen bg-[#f4f1eb] flex items-center justify-center px-6 md:px-12"
+      className="min-h-screen bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 flex items-center justify-center px-6 md:px-12"
     >
       <div className="grid grid-cols-1 md:grid-cols-2 items-center max-w-[1200px] w-full gap-y-12 md:gap-x-32">
         <div className="flex justify-center">
           <img
             src={landingImage}
             alt="Ellis Pae"
-            className="w-[340px] border border-black shadow-md"
+            className="w-[340px] rounded-lg shadow-lg border border-gray-300"
           />
         </div>
 
