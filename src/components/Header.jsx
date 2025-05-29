@@ -62,12 +62,9 @@ const Header = () => {
     }
   };
 
-  const { darkMode, setDarkMode } = useContext(ThemeContext);
-
   return (
     <header className="bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-200 w-full fixed top-0 left-0 z-50 shadow-md">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        {/* Social Links */}
         <div className="flex space-x-6">
           {socialLinks.map(({ name, icon, url }) => (
             <a
@@ -83,17 +80,6 @@ const Header = () => {
           ))}
         </div>
 
-        <div>
-          <button
-            onClick={() => setDarkMode(!darkMode)}
-            className="ml-4 text-xl hover:text-blue-400"
-            aria-label="Toggle Theme"
-          >
-            {darkMode ? "🌙" : "☀️"}
-          </button>
-        </div>
-
-        {/* Burger Menu */}
         <div className="relative">
           <button
             onClick={toggleMenu}
@@ -118,7 +104,6 @@ const Header = () => {
           )}
         </div>
       </div>
-      {console.log("darkMode is", darkMode)}
     </header>
   );
 };
