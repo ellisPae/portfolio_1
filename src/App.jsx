@@ -4,10 +4,11 @@ import Landing from "./components/Landing";
 import AboutMe from "./components/AboutMe";
 import ProjectsCarousel from "./components/ProjectsCarousel";
 import ContactMe from "./components/ContactMe";
+import ThemeToggle from "./components/ThemeToggle";
 
 function App() {
   return (
-    <>
+    <div className="min-h-screen bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
       <Header />
       <main className="snap-y snap-mandatory h-screen overflow-y-scroll scroll-smooth">
         <section id="landing-section" className="snap-start h-screen">
@@ -23,7 +24,8 @@ function App() {
           <ContactMe />
         </section>
       </main>
-    </>
+      <ThemeToggle />
+    </div>
   );
 }
 

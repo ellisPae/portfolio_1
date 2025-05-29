@@ -11,6 +11,8 @@ import {
   faBars,
   faTimes,
 } from "@fortawesome/free-solid-svg-icons";
+import { useContext } from "react";
+import { ThemeContext } from "../context/ThemeContext";
 
 const socialLinks = [
   {
@@ -36,7 +38,7 @@ const socialLinks = [
   {
     name: "Stack Overflow",
     icon: faStackOverflow,
-    url: "https://stackoverflow.com", // replace with your actual profile link
+    url: "https://stackoverflow.com",
   },
 ];
 
@@ -61,46 +63,47 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-gray-800 text-white w-full fixed top-0 left-0 z-50 shadow">
-      <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-        <div className="flex space-x-4">
+    <header className="bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-200 w-full fixed top-0 left-0 z-50 shadow-md">
+      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <div className="flex space-x-6">
           {socialLinks.map(({ name, icon, url }) => (
             <a
               key={name}
               href={url}
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-blue-400"
               aria-label={name}
+              className="text-2xl hover:text-blue-600 transition"
             >
-              <FontAwesomeIcon icon={icon} className="text-xl" />
+              <FontAwesomeIcon icon={icon} />
             </a>
           ))}
         </div>
 
-        <div>
-          <button onClick={toggleMenu} aria-label="Toggle Menu">
-            <FontAwesomeIcon
-              icon={isMenuOpen ? faTimes : faBars}
-              className="text-2xl"
-            />
+        <div className="relative">
+          <button
+            onClick={toggleMenu}
+            className="text-2xl hover:text-blue-600 transition"
+            aria-label="Toggle Menu"
+          >
+            <FontAwesomeIcon icon={isMenuOpen ? faTimes : faBars} />
           </button>
+
+          {isMenuOpen && (
+            <div className="absolute right-0 mt-2 w-44 bg-white rounded-md shadow-lg border py-2 dark:bg-gray-900 text-gray-800 dark:text-gray-200">
+              {sectionLinks.map(({ name, id }) => (
+                <button
+                  key={name}
+                  onClick={() => scrollToSection(id)}
+                  className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100"
+                >
+                  {name}
+                </button>
+              ))}
+            </div>
+          )}
         </div>
       </div>
-
-      {isMenuOpen && (
-        <div className="absolute right-60 top-full mt-2 w-48 bg-gray-700 rounded-md shadow-lg py-2 z-50">
-          {sectionLinks.map(({ name, id }) => (
-            <button
-              key={name}
-              onClick={() => scrollToSection(id)}
-              className="block w-full text-left text-white hover:text-blue-400 px-4 py-2"
-            >
-              {name}
-            </button>
-          ))}
-        </div>
-      )}
     </header>
   );
 };

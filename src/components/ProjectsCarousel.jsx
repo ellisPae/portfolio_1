@@ -41,7 +41,7 @@ const ProjectsCarousel = () => {
   return (
     <section
       id="projects-section"
-      className="bg-[#f4f1eb] px-6 py-20 min-h-screen text-gray-800"
+      className="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 min-h-screen flex items-center justify-center px-6 pt-32 pb-20 transition-colors duration-300"
     >
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl font-bold mb-10 text-left">Projects</h2>
@@ -58,7 +58,7 @@ const ProjectsCarousel = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="flex flex-col md:flex-row items-center gap-10 bg-white p-8 rounded-lg shadow-md"
+              className="flex flex-col md:flex-row items-center gap-10 bg-gray-50 dark:bg-gray-800 p-8 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 transition-colors duration-300"
             >
               <div className="w-[200px] h-[200px] flex-shrink-0 overflow-hidden rounded-md shadow">
                 <img
@@ -69,10 +69,12 @@ const ProjectsCarousel = () => {
               </div>
               <div className="text-center md:text-left max-w-lg">
                 <h3 className="text-2xl font-semibold mb-2">{project.title}</h3>
-                <p className="text-gray-600 mb-4">{project.description}</p>
+                <p className="text-gray-600 dark:text-gray-300 mb-4">
+                  {project.description}
+                </p>
                 <a
                   href={project.github}
-                  className="text-blue-600 hover:underline font-medium"
+                  className="text-blue-600 dark:text-blue-400 hover:underline font-medium"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
