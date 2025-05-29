@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faGithub,
@@ -11,7 +11,6 @@ import {
   faBars,
   faTimes,
 } from "@fortawesome/free-solid-svg-icons";
-import { useContext } from "react";
 import { ThemeContext } from "../context/ThemeContext";
 
 const socialLinks = [
@@ -51,6 +50,7 @@ const sectionLinks = [
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { darkMode } = useContext(ThemeContext);
 
   const toggleMenu = () => setIsMenuOpen((prev) => !prev);
 
@@ -63,8 +63,8 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-200 w-full fixed top-0 left-0 z-50 shadow-md">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <header className="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 w-full fixed top-0 left-0 z-50 shadow-md transition-colors duration-300">
+      <div className="max-w-8xl mx-auto px-6 py-4 flex justify-between items-center">
         <div className="flex space-x-6">
           {socialLinks.map(({ name, icon, url }) => (
             <a
@@ -73,7 +73,7 @@ const Header = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={name}
-              className="text-2xl hover:text-blue-600 transition"
+              className="text-2xl hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
             >
               <FontAwesomeIcon icon={icon} />
             </a>
@@ -83,19 +83,19 @@ const Header = () => {
         <div className="relative">
           <button
             onClick={toggleMenu}
-            className="text-2xl hover:text-blue-600 transition"
+            className="text-2xl hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
             aria-label="Toggle Menu"
           >
             <FontAwesomeIcon icon={isMenuOpen ? faTimes : faBars} />
           </button>
 
           {isMenuOpen && (
-            <div className="absolute right-0 mt-2 w-44 bg-white rounded-md shadow-lg border py-2 dark:bg-gray-900 text-gray-800 dark:text-gray-200">
+            <div className="absolute right-0 mt-2 w-44 bg-white dark:bg-gray-900 rounded-md shadow-lg border border-gray-200 dark:border-gray-700 py-2 transition-colors duration-300">
               {sectionLinks.map(({ name, id }) => (
                 <button
                   key={name}
                   onClick={() => scrollToSection(id)}
-                  className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100"
+                  className="block w-full text-left px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200"
                 >
                   {name}
                 </button>

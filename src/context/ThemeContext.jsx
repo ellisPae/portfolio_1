@@ -3,16 +3,20 @@ import React, { createContext, useState, useEffect } from "react";
 export const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
-  const [darkMode, setDarkMode] = useState(null); // Start uninitialized
+  const [darkMode, setDarkMode] = useState(null);
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
 
-    // Default to light if nothing is saved
     if (savedTheme === "dark") {
       setDarkMode(true);
+    } else if (savedTheme === "light") {
+      setDarkMode(false);
     } else {
-      setDarkMode(false); // Light mode is default
+      const prefersDark = window.matchMedia(
+        "(prefers-color-scheme: dark)"
+      ).matches;
+      setDarkMode(prefersDark);
     }
   }, []);
 
@@ -20,7 +24,10 @@ export const ThemeProvider = ({ children }) => {
     if (darkMode === null) return;
 
     const root = document.documentElement;
-
+    console.log(
+      "👉 ThemeContext effect:",
+      darkMode ? "ADDING dark" : "REMOVING dark"
+    );
     if (darkMode) {
       root.classList.add("dark");
       localStorage.setItem("theme", "dark");
@@ -28,9 +35,7 @@ export const ThemeProvider = ({ children }) => {
       root.classList.remove("dark");
       localStorage.setItem("theme", "light");
     }
-
-    console.log("darkMode is", darkMode);
-    console.log("HTML classList is now:", root.classList.value);
+    console.log("📋 html.classList is now:", root.classList.value);
   }, [darkMode]);
 
   if (darkMode === null) {

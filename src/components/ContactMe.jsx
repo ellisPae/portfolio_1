@@ -62,23 +62,24 @@ const ContactMe = () => {
   return (
     <section
       id="contactme-section"
-      className="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 min-h-screen px-6 py-16 flex justify-center items-center transition-colors duration-300"
+      className="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 min-h-screen px-4 md:px-20 py-16 flex justify-center items-center transition-colors duration-300"
     >
       <form
         onSubmit={handleSubmit(onSubmit)}
         className="bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200 p-10 rounded-xl shadow-lg w-full max-w-xl space-y-6 border border-gray-200 dark:border-gray-700 transition-colors duration-300"
       >
-        <h2 className="text-3xl font-bold text-center text-gray-800 dark:text-gray-100">
+        <h2 className="text-3xl font-bold text-center text-gray-800 dark:text-gray-100 transition-colors duration-300">
           Contact Me
         </h2>
 
+        {/* Name Field */}
         <div>
-          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">
+          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 transition-colors">
             Name
           </label>
           <input
             {...register("name", { required: "Name is required" })}
-            className="mt-1 block w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100"
+            className="mt-1 block w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100 transition-colors duration-300"
             placeholder="Full Name"
           />
           {errors.name && (
@@ -86,8 +87,9 @@ const ContactMe = () => {
           )}
         </div>
 
+        {/* Email Field */}
         <div>
-          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">
+          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 transition-colors">
             Email
           </label>
           <input
@@ -95,7 +97,7 @@ const ContactMe = () => {
               required: "Email is required",
               pattern: { value: /^\S+@\S+$/, message: "Enter a valid email" },
             })}
-            className="mt-1 block w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100"
+            className="mt-1 block w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100 transition-colors duration-300"
             placeholder="john.doe@example.com"
           />
           {errors.email && (
@@ -103,8 +105,9 @@ const ContactMe = () => {
           )}
         </div>
 
+        {/* Phone Field */}
         <div>
-          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">
+          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 transition-colors">
             Phone Number
           </label>
           <input
@@ -117,7 +120,7 @@ const ContactMe = () => {
                 message: "Enter a valid phone number",
               },
             })}
-            className="mt-1 block w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100"
+            className="mt-1 block w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100 transition-colors duration-300"
             placeholder="(123) 456-7890"
           />
           {errors.phone && (
@@ -125,8 +128,9 @@ const ContactMe = () => {
           )}
         </div>
 
+        {/* Inquiry Type */}
         <div>
-          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">
+          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 transition-colors">
             Type of Inquiry
           </label>
           <select
@@ -134,7 +138,7 @@ const ContactMe = () => {
             {...register("inquiryType", {
               required: "Please select an inquiry type",
             })}
-            className={`mt-1 block w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm bg-white dark:bg-gray-900 ${
+            className={`mt-1 block w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm bg-white dark:bg-gray-900 transition-colors duration-300 ${
               watch("inquiryType") === ""
                 ? "text-gray-400 dark:text-gray-500"
                 : "text-black dark:text-white"
@@ -151,13 +155,14 @@ const ContactMe = () => {
           </select>
         </div>
 
+        {/* Message */}
         <div>
-          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">
+          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 transition-colors">
             Message
           </label>
           <textarea
             {...register("message", { required: "Message is required" })}
-            className="mt-1 block w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100"
+            className="mt-1 block w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100 transition-colors duration-300"
             rows="4"
             placeholder="Your message..."
           ></textarea>
@@ -168,6 +173,7 @@ const ContactMe = () => {
           )}
         </div>
 
+        {/* Submit Button */}
         <button
           type="submit"
           className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition disabled:opacity-50"
