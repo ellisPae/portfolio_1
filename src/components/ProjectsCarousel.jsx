@@ -41,10 +41,12 @@ const ProjectsCarousel = () => {
   return (
     <section
       id="projects-section"
-      className="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 min-h-screen flex items-center justify-center px-6 pt-32 pb-20 transition-colors duration-300"
+      className="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 min-h-screen flex items-center justify-center px-4 md:px-20 pt-32 pb-20 transition-colors duration-300"
     >
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold mb-10 text-left">Projects</h2>
+      <div className="max-w-screen-xl w-full">
+        <h2 className="text-4xl font-bold mb-10 text-left text-gray-900 dark:text-gray-100 transition-colors duration-300">
+          Projects
+        </h2>
         <Carousel
           showThumbs={false}
           showStatus={false}
@@ -58,7 +60,7 @@ const ProjectsCarousel = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="flex flex-col md:flex-row items-center gap-10 bg-gray-50 dark:bg-gray-800 p-8 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 transition-colors duration-300"
+              className="flex flex-col md:flex-row items-center gap-10 bg-gray-50 dark:bg-gray-800 text-gray-800 dark:text-gray-100 p-8 rounded-xl shadow-md border border-gray-200 dark:border-gray-700 transition-all duration-300"
             >
               <div className="w-[200px] h-[200px] flex-shrink-0 overflow-hidden rounded-md shadow">
                 <img
@@ -67,14 +69,16 @@ const ProjectsCarousel = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="text-center md:text-left max-w-lg">
-                <h3 className="text-2xl font-semibold mb-2">{project.title}</h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-4">
+              <div className="text-center md:text-left max-w-xl">
+                <h3 className="text-2xl font-semibold mb-2 transition-colors duration-300">
+                  {project.title}
+                </h3>
+                <p className="text-gray-700 dark:text-gray-300 mb-4 transition-colors duration-300">
                   {project.description}
                 </p>
                 <a
                   href={project.github}
-                  className="text-blue-600 dark:text-blue-400 hover:underline font-medium"
+                  className="text-blue-600 dark:text-blue-400 hover:underline font-medium transition-colors duration-300"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

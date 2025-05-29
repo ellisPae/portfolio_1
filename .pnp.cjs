@@ -49,12 +49,13 @@ const RAW_RUNTIME_STATE =
           ["framer-motion", "virtual:e38187e628912dc9cc2da9471c4985ad412ea1484ab0b047786fc35a218986626b1cf368502ab2d64fbc11eca973a33d9397934cd49e01f8b80f6c4decea0389#npm:7.10.3"],\
           ["globals", "npm:16.1.0"],\
           ["portfolio_1", "workspace:."],\
-          ["postcss", "npm:8.5.3"],\
+          ["postcss", "npm:8.5.4"],\
           ["react", "npm:19.1.0"],\
           ["react-dom", "virtual:e38187e628912dc9cc2da9471c4985ad412ea1484ab0b047786fc35a218986626b1cf368502ab2d64fbc11eca973a33d9397934cd49e01f8b80f6c4decea0389#npm:19.1.0"],\
           ["react-hook-form", "virtual:e38187e628912dc9cc2da9471c4985ad412ea1484ab0b047786fc35a218986626b1cf368502ab2d64fbc11eca973a33d9397934cd49e01f8b80f6c4decea0389#npm:7.56.4"],\
+          ["react-icons", "virtual:e38187e628912dc9cc2da9471c4985ad412ea1484ab0b047786fc35a218986626b1cf368502ab2d64fbc11eca973a33d9397934cd49e01f8b80f6c4decea0389#npm:5.5.0"],\
           ["react-responsive-carousel", "npm:3.2.23"],\
-          ["tailwindcss", "npm:4.1.7"],\
+          ["tailwindcss", "npm:4.1.8"],\
           ["vite", "virtual:e38187e628912dc9cc2da9471c4985ad412ea1484ab0b047786fc35a218986626b1cf368502ab2d64fbc11eca973a33d9397934cd49e01f8b80f6c4decea0389#npm:6.3.5"]\
         ],\
         "linkType": "SOFT"\
@@ -1890,7 +1891,7 @@ const RAW_RUNTIME_STATE =
           ["fraction.js", "npm:4.3.7"],\
           ["normalize-range", "npm:0.1.2"],\
           ["picocolors", "npm:1.1.1"],\
-          ["postcss", "npm:8.5.3"],\
+          ["postcss", "npm:8.5.4"],\
           ["postcss-value-parser", "npm:4.2.0"]\
         ],\
         "packagePeers": [\
@@ -3572,12 +3573,13 @@ const RAW_RUNTIME_STATE =
           ["framer-motion", "virtual:e38187e628912dc9cc2da9471c4985ad412ea1484ab0b047786fc35a218986626b1cf368502ab2d64fbc11eca973a33d9397934cd49e01f8b80f6c4decea0389#npm:7.10.3"],\
           ["globals", "npm:16.1.0"],\
           ["portfolio_1", "workspace:."],\
-          ["postcss", "npm:8.5.3"],\
+          ["postcss", "npm:8.5.4"],\
           ["react", "npm:19.1.0"],\
           ["react-dom", "virtual:e38187e628912dc9cc2da9471c4985ad412ea1484ab0b047786fc35a218986626b1cf368502ab2d64fbc11eca973a33d9397934cd49e01f8b80f6c4decea0389#npm:19.1.0"],\
           ["react-hook-form", "virtual:e38187e628912dc9cc2da9471c4985ad412ea1484ab0b047786fc35a218986626b1cf368502ab2d64fbc11eca973a33d9397934cd49e01f8b80f6c4decea0389#npm:7.56.4"],\
+          ["react-icons", "virtual:e38187e628912dc9cc2da9471c4985ad412ea1484ab0b047786fc35a218986626b1cf368502ab2d64fbc11eca973a33d9397934cd49e01f8b80f6c4decea0389#npm:5.5.0"],\
           ["react-responsive-carousel", "npm:3.2.23"],\
-          ["tailwindcss", "npm:4.1.7"],\
+          ["tailwindcss", "npm:4.1.8"],\
           ["vite", "virtual:e38187e628912dc9cc2da9471c4985ad412ea1484ab0b047786fc35a218986626b1cf368502ab2d64fbc11eca973a33d9397934cd49e01f8b80f6c4decea0389#npm:6.3.5"]\
         ],\
         "linkType": "SOFT"\
@@ -3590,6 +3592,16 @@ const RAW_RUNTIME_STATE =
           ["nanoid", "npm:3.3.11"],\
           ["picocolors", "npm:1.1.1"],\
           ["postcss", "npm:8.5.3"],\
+          ["source-map-js", "npm:1.2.1"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:8.5.4", {\
+        "packageLocation": "../../../.yarn/berry/cache/postcss-npm-8.5.4-d0ce8ab5dd-10c0.zip/node_modules/postcss/",\
+        "packageDependencies": [\
+          ["nanoid", "npm:3.3.11"],\
+          ["picocolors", "npm:1.1.1"],\
+          ["postcss", "npm:8.5.4"],\
           ["source-map-js", "npm:1.2.1"]\
         ],\
         "linkType": "HARD"\
@@ -3710,6 +3722,28 @@ const RAW_RUNTIME_STATE =
           ["@types/react", "npm:19.1.5"],\
           ["react", "npm:19.1.0"],\
           ["react-hook-form", "virtual:e38187e628912dc9cc2da9471c4985ad412ea1484ab0b047786fc35a218986626b1cf368502ab2d64fbc11eca973a33d9397934cd49e01f8b80f6c4decea0389#npm:7.56.4"]\
+        ],\
+        "packagePeers": [\
+          "@types/react",\
+          "react"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["react-icons", [\
+      ["npm:5.5.0", {\
+        "packageLocation": "../../../.yarn/berry/cache/react-icons-npm-5.5.0-906730a3cf-10c0.zip/node_modules/react-icons/",\
+        "packageDependencies": [\
+          ["react-icons", "npm:5.5.0"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:e38187e628912dc9cc2da9471c4985ad412ea1484ab0b047786fc35a218986626b1cf368502ab2d64fbc11eca973a33d9397934cd49e01f8b80f6c4decea0389#npm:5.5.0", {\
+        "packageLocation": "./.yarn/__virtual__/react-icons-virtual-0c296f1880/4/.yarn/berry/cache/react-icons-npm-5.5.0-906730a3cf-10c0.zip/node_modules/react-icons/",\
+        "packageDependencies": [\
+          ["@types/react", "npm:19.1.5"],\
+          ["react", "npm:19.1.0"],\
+          ["react-icons", "virtual:e38187e628912dc9cc2da9471c4985ad412ea1484ab0b047786fc35a218986626b1cf368502ab2d64fbc11eca973a33d9397934cd49e01f8b80f6c4decea0389#npm:5.5.0"]\
         ],\
         "packagePeers": [\
           "@types/react",\
@@ -4022,6 +4056,13 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../../.yarn/berry/cache/tailwindcss-npm-4.1.7-fa2df55972-10c0.zip/node_modules/tailwindcss/",\
         "packageDependencies": [\
           ["tailwindcss", "npm:4.1.7"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:4.1.8", {\
+        "packageLocation": "../../../.yarn/berry/cache/tailwindcss-npm-4.1.8-1afed126e3-10c0.zip/node_modules/tailwindcss/",\
+        "packageDependencies": [\
+          ["tailwindcss", "npm:4.1.8"]\
         ],\
         "linkType": "HARD"\
       }]\
