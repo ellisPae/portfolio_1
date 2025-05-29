@@ -24,10 +24,7 @@ export const ThemeProvider = ({ children }) => {
     if (darkMode === null) return;
 
     const root = document.documentElement;
-    console.log(
-      "👉 ThemeContext effect:",
-      darkMode ? "ADDING dark" : "REMOVING dark"
-    );
+
     if (darkMode) {
       root.classList.add("dark");
       localStorage.setItem("theme", "dark");
@@ -35,7 +32,6 @@ export const ThemeProvider = ({ children }) => {
       root.classList.remove("dark");
       localStorage.setItem("theme", "light");
     }
-    console.log("📋 html.classList is now:", root.classList.value);
   }, [darkMode]);
 
   if (darkMode === null) {
