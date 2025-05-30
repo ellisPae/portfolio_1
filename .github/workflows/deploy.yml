@@ -1,5 +1,9 @@
 name: Deploy to GitHub Pages
 
+# grant this job write access to repo contents
+permissions:
+  contents: write
+
 on:
   push:
     branches:
@@ -11,6 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          persist-credentials: false
           fetch-depth: 0
 
       - uses: actions/setup-node@v4
