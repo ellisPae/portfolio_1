@@ -84,47 +84,6 @@ yarn preview  # or npm run preview
 
 ---
 
-## Deployment to GitHub Pages
-
-1. **Configure**:
-
-   * In `package.json`, add:
-
-     ```jsonc
-     "homepage": "https://<USERNAME>.github.io/portfolio_1"
-     ```
-   * In `vite.config.js`, set:
-
-     ```js
-     export default defineConfig({
-       base: '/portfolio_1/',
-       // ...
-     });
-     ```
-2. **Install gh-pages** (dev-dependency):
-
-   ```bash
-   yarn add -D gh-pages
-   # or npm install --save-dev gh-pages
-   ```
-3. **Add scripts** in `package.json`:
-
-   ```jsonc
-   "scripts": {
-     "build": "vite build",
-     "predeploy": "yarn build",
-     "deploy": "gh-pages -d dist"
-   }
-   ```
-4. **Deploy**:
-
-   ```bash
-   yarn deploy   # or npm run deploy
-   ```
-5. **Enable** GitHub Pages under your repo’s **Settings > Pages** → choose `gh-pages` branch.
-
----
-
 ## Project Structure
 
 ```
