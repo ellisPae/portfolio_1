@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>
+      const saved = localStorage.getItem("theme");
+      if (
+        saved === "dark" ||
+        (!saved && window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("dark");
+      }
+    </script>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/portfolio_1/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ellis Pae – Portfolio</title>
+    <script type="module" crossorigin src="/portfolio_1/assets/index-DKL0HCuu.js"></script>
+    <link rel="stylesheet" crossorigin href="/portfolio_1/assets/index-CHXqmCfK.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
